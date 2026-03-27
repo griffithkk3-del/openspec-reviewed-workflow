@@ -1,6 +1,8 @@
 # openspec-reviewed-workflow
 
-An evidence-driven review workflow for [OpenSpec](https://github.com/openspec-dev/openspec) that adds a **review gate** between proposal and specs/design.
+An evidence-driven review workflow for [OpenSpec](https://github.com/Fission-AI/OpenSpec) that adds a **review gate** between proposal and specs/design.
+
+> **This is a workflow extension, not a standalone tool.** You need [OpenSpec CLI](https://github.com/Fission-AI/OpenSpec) installed first.
 
 ## Why
 
@@ -42,12 +44,22 @@ proposal → review → specs → design → tasks → apply
 
 ## Quick Start
 
-### Prerequisites
+### 1. Install OpenSpec CLI (required)
 
-- [OpenSpec CLI](https://github.com/openspec-dev/openspec) installed
-- A project with `openspec init` already run
+```bash
+npm install -g @fission-ai/openspec
+```
 
-### Install
+> See [OpenSpec GitHub](https://github.com/Fission-AI/OpenSpec) for more details.
+
+### 2. Initialize OpenSpec in your project
+
+```bash
+cd /path/to/your-project
+openspec init
+```
+
+### 3. Install this review workflow
 
 ```bash
 git clone https://github.com/griffithkk3-del/openspec-reviewed-workflow.git
@@ -57,7 +69,7 @@ cd openspec-reviewed-workflow
 
 This copies the schema, templates, and Cursor skill into your project, and sets `spec-driven-reviewed` as the default schema.
 
-### Manual Install
+### Manual Install (alternative)
 
 If you prefer to copy manually:
 
@@ -65,7 +77,7 @@ If you prefer to copy manually:
 2. Copy `.cursor/skills/openspec-review-proposal/` to your project's `.cursor/skills/`
 3. Set `schema: spec-driven-reviewed` in your project's `openspec/config.yaml`
 
-### Use
+### 4. Use
 
 ```bash
 # Create a new change
